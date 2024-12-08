@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int playerHealth, enemyHealth;
+
+    cout << "Enter Player Health: ";
+    cin >> playerHealth;
+    cout << "Enter Enemy Health: ";
+    cin >> enemyHealth;
+
+    if (playerHealth == 100) {
+        cout << "Player health is full.\n";
+    } else if (playerHealth == 50) {
+        cout << "Player health is half.\n";
+    } else if (playerHealth == 0) {
+        cout << "Player health is zero. Game Over. Player lost.\n";
+    } else if (playerHealth > 0) {
+        cout << "Player health is " << playerHealth << ".\n";
+        
+        if (enemyHealth == 100) {
+            cout << "Enemy health is full.\n";
+        } else if (enemyHealth == 50) {
+            cout << "Enemy health is half.\n";
+        } else if (enemyHealth == 0) {
+            cout << "Enemy health is zero. Game Over. Player won.\n";
+        } else if (enemyHealth > 0) {
+            cout << "Enemy health is " << enemyHealth << ".\n";
+        }
+    }
+
+    if (playerHealth == 0 && enemyHealth == 0) {
+        cout << "Both player and enemy health are zero. Game Over. It's a draw.\n";
+    }
+
+    return 0;
+}
